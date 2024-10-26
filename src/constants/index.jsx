@@ -2,23 +2,23 @@ export const features = [
   {
     id: "0",
     icon: "/images/feature-1.png",
-    caption: "Easy integration",
+    caption: "Easy Integration",
     title: "Work smarter not harder",
-    text: "With Xora, tedious tasks are history. Automation and smart processes bring your productivity to new heights. It's like having an extra cup of coffee, but without the jitters.",
+    text: "We provide complete IT support, from on-site troubleshooting to hardware repairs. Our technicians resolve issues directly at your location or from our workshop, relieving your team of the burden.",
     button: {
       icon: "/images/magictouch.svg",
-      title: "Watch the demo",
+      title: "Explore More",
     },
   },
   {
     id: "1",
     icon: "/images/feature-2.png",
-    caption: "Secure & trustworthy",
+    caption: "Realiable & Always Available",
     title: "Sleep easy, we got your back",
-    text: "Your data security is our priority. With state-of-the-art encryption and robust privacy controls, Xora helps keeps your information secure and locked up tighter than Fort Knox.",
+    text: "Our customers are our top priority, and we aim to deliver an unmatched service experience. We’ll ensure all your systems run smoothly, boosting efficiency and maximizing your technology's potential.",
     button: {
       icon: "/images/docs.svg",
-      title: "Read the docs",
+      title: "Join Us",
     },
   },
 ];
@@ -27,17 +27,17 @@ export const details = [
   {
     id: "0",
     icon: "/images/detail-1.png",
-    title: "AI automated video editing",
+    title: "Proactive Maintenance and Monitoring",
   },
   {
     id: "1",
     icon: "/images/detail-2.png",
-    title: "Collaborate with your team",
+    title: "Customizable Service Plans",
   },
   {
     id: "2",
     icon: "/images/detail-3.png",
-    title: "Ultra fast cloud-engine",
+    title: "CTRL+Z standard repairs ",
   },
   {
     id: "3",
