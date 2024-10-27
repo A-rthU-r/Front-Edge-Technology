@@ -420,10 +420,4 @@ export const socials = [
     icon: "/images/socials/instagram.svg",
     url: "#",
   },
-  {
-    id: "3",
-    title: "Discord",
-    icon: "/images/socials/discord.svg",
-    url: "#",
-  },
 ];
