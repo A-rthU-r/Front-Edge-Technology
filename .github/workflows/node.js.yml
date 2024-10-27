@@ -29,12 +29,11 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      # Upload build artifact for use in the deployment job
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: build
-          path: ./build # Make sure this matches your build directory
+          name: dist
+          path: ./dist # Ensure this matches your Vite output directory
 
   deploy:
     runs-on: ubuntu-latest
@@ -44,14 +43,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Download the build artifacts uploaded by the build job
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
-          name: build
+          name: dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist # Ensure this matches your Vite output directory
