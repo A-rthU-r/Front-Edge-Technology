@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+  pull_request:
+    branches:
+      - main  # Optional: Deploy on pull request merge
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'  # Use your preferred Node.js version
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps  # Install dependencies
+
+      - name: Build project
+        run: npm run build  # Build your project
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # Change this if your build output directory is different
